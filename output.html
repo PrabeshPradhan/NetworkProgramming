@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Output</title>
+  </head>
+  <body>
+    <h1>Output</h1>
+    <ul id="container"></ul>
+    <script>
+      const container = document.getElementById("container");
+      for (let i = 0; i < 10; i++) {
+        // Create list item
+        const li = document.createElement("li");
+
+        // Create image element
+        const img = document.createElement("img");
+        img.src = `outputs/${i}.png`; // adjust path/filename pattern
+        img.alt = `Qsn ${i} output`;
+
+        // Append image to list item, then list item to container
+        li.appendChild(img);
+        container.appendChild(li);
+      }
+    </script>
+  </body>
+</html>
